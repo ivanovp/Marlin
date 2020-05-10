@@ -723,12 +723,6 @@
 //=============================================================================
 // @section motion
 
-// Peter Ivanov's calculation
-// Z
-// 200 steps/revolution motor, 1/16 microstepping, Tr12x3
-// 200.0 * 16 / 3 mm = 1066.67
-// 200 steps/revolution motor, 1/16 microstepping, M8 thread (1.25 mm/rev.)
-// 200.0 * 16 / 1.25 mm = 2560.0
 // Extruder: (200.0f * 16) * (47 / 9) / (7 * 3.14159f) = 759.9
 /**
  * Default Settings
@@ -750,9 +744,16 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
+// Peter Ivanov's calculation
+// Z
+// 200 steps/revolution motor, 1/16 microstepping, Tr12x3
+// 200.0 * 16 / 3 mm = 1066.67
+// 200 steps/revolution motor, 1/16 microstepping, M8 thread (1.25 mm/rev.)
+// 200.0 * 16 / 1.25 mm = 2560.0
+// M5x0.8  -> 4000
 // M8x1.25 -> 2560
 // Tr12x3  -> 1066
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1066, 1025 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 1025 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1564,7 +1565,7 @@
  * Attention: EXPERIMENTAL. G-code arguments may change.
  *
  */
-//#define NOZZLE_CLEAN_FEATURE
+#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
