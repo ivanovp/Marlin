@@ -294,11 +294,21 @@
 
 #if HAS_DRIVER(TMC2130)
   // J8
+  #ifndef X_CS_PIN
   #define X_CS_PIN                         P1_22
+  #endif
+  #ifndef Y_CS_PIN
   #define Y_CS_PIN                         P1_23
+  #endif
+  #ifndef Z_CS_PIN
   #define Z_CS_PIN                         P2_12
+  #endif
+  #ifndef E0_CS_PIN
   #define E0_CS_PIN                        P2_11
+  #endif
+  #ifndef E1_CS_PIN
   #define E1_CS_PIN                        P4_28
+  #endif
 
   // Hardware SPI is on EXP2. See if you can make it work:
   // https://github.com/makerbase-mks/MKS-SBASE/issues/25

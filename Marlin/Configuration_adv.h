@@ -2359,10 +2359,10 @@
    * The default pins can be found in your board's pins file.
    */
   //#define X_CS_PIN          -1
-  //#define Y_CS_PIN          -1
+  #define Y_CS_PIN          P2_11
   //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
-  //#define Y2_CS_PIN         -1
+  #define Y2_CS_PIN         P4_28
   //#define Z2_CS_PIN         -1
   //#define Z3_CS_PIN         -1
   //#define E0_CS_PIN         -1
@@ -2379,10 +2379,10 @@
    * The default SW SPI pins are defined the respective pins files,
    * but you can override or define them here.
    */
-  //#define TMC_USE_SW_SPI
-  //#define TMC_SW_MOSI       -1
-  //#define TMC_SW_MISO       -1
-  //#define TMC_SW_SCK        -1
+  #define TMC_USE_SW_SPI
+  #define TMC_SW_MOSI       P0_02
+  #define TMC_SW_MISO       P1_22 
+  #define TMC_SW_SCK        P0_03 
 
   /**
    * Four TMC2209 drivers can use the same HW/SW serial port with hardware configured addresses.
@@ -2555,7 +2555,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
@@ -3554,7 +3554,7 @@
 //
 // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
 //
-//#define PINS_DEBUGGING
+#define PINS_DEBUGGING
 
 // Enable Marlin dev mode which adds some special commands
 //#define MARLIN_DEV_MODE
