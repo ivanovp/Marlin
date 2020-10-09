@@ -2380,9 +2380,9 @@
    * but you can override or define them here.
    */
   #define TMC_USE_SW_SPI
-  #define TMC_SW_MOSI       P0_02
-  #define TMC_SW_MISO       P1_22 
-  #define TMC_SW_SCK        P0_03 
+  #define TMC_SW_MOSI       P2_12
+  #define TMC_SW_MISO       P1_23
+  #define TMC_SW_SCK        P1_22
 
   /**
    * Four TMC2209 drivers can use the same HW/SW serial port with hardware configured addresses.
