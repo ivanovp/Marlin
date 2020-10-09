@@ -2358,11 +2358,11 @@
    * Override default SPI pins for TMC2130, TMC2160, TMC2660, TMC5130 and TMC5160 drivers here.
    * The default pins can be found in your board's pins file.
    */
-  //#define X_CS_PIN          -1
-  #define Y_CS_PIN          P2_11
+  #define X_CS_PIN          P0_03 // RX0, pin 8 on AUX-1
+  #define Y_CS_PIN          P2_11 // J8-5
   //#define Z_CS_PIN          -1
   //#define X2_CS_PIN         -1
-  #define Y2_CS_PIN         P4_28
+  #define Y2_CS_PIN         P4_28 // J8-6
   //#define Z2_CS_PIN         -1
   //#define Z3_CS_PIN         -1
   //#define E0_CS_PIN         -1
@@ -2380,9 +2380,9 @@
    * but you can override or define them here.
    */
   #define TMC_USE_SW_SPI
-  #define TMC_SW_MOSI       P2_12
-  #define TMC_SW_MISO       P1_23
-  #define TMC_SW_SCK        P1_22
+  #define TMC_SW_MOSI       P2_12 // J8-4
+  #define TMC_SW_MISO       P1_23 // J8-3
+  #define TMC_SW_SCK        P1_22 // J8-2
 
   /**
    * Four TMC2209 drivers can use the same HW/SW serial port with hardware configured addresses.
