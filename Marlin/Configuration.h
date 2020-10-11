@@ -754,7 +754,7 @@
 // M5x0.8  -> 4000
 // M8x1.25 -> 2560
 // Tr12x3  -> 1066
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 1025 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80*16, 80*16, 4000, 1025 }
 
 /**
  * Default Max Feed Rate (mm/s)
